@@ -38,7 +38,13 @@ app.get('/', (req, res) => {
   res.send(ads);
 });
 
+
 // starting the server
-app.listen(3001, () => {
-  console.log('listening on port 3001');
-});
+const PORT=3001
+const userRoute=require('./routes/user')
+const contactRoute=require('./routes/contact')
+app.use("/user",userRoute)
+app.use("/contact",contactRoute)
+app.listen(PORT,()=>{
+    console.log("Server is running")
+})

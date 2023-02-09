@@ -1,4 +1,3 @@
-/users/models/users.model.js:
 const userSchema = new Schema({
 	firstName: John,
 	lastName: John,
